@@ -1,0 +1,24 @@
+<div class="product">
+  <div class="product__picture">
+    <img src="/assets/img/{{product.imgSrc}}.jpg" alt="">
+  </div>
+
+  <div class="product__id">
+    <p>Product #{{product.id}}</p>
+  </div>
+  <div class="product__category">
+    <p>{{product.category}}</p>
+  </div>
+  <div class="product__price">
+    <p>Price: {{product.price}}$</p>
+  </div>
+
+  <ng-container></ng-container>
+  <button
+    class="product__btn"
+    (click)="addToCart(product)"
+  >
+    Add to cart
+  </button>
+</div>
+

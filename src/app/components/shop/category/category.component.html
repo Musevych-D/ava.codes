@@ -1,0 +1,8 @@
+<div class="category" *ngIf="category">
+  <div class="category__name">
+    <p>{{category.id}}</p>
+  </div>
+  <div class="category__products">
+    <ava-product *ngFor="let product of category.products" [product]="product"></ava-product>
+  </div>
+</div>

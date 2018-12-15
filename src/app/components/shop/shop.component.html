@@ -1,0 +1,41 @@
+<div class="shop">
+
+  <p>This is a Shop view</p>
+
+  <ng-container *ngIf="categoryList">
+    <div class="shop__categoryTabs">
+
+      <span>
+          Sort by categories:
+      </span>
+
+      <div
+        class="shop__categoryTab"
+        *ngFor="let category of categoryList"
+      >
+
+        <a
+          [routerLink]="['./', category.id]"
+          [class.shop__categoryTab-disabled]="selectedCategory !== category.id"
+          [class.shop__categoryTab-active]="selectedCategory === category.id"
+          (click)="onCategorySelect(category.id)"
+        >
+          {{category.id}}
+        </a>
+
+      </div>
+
+      <button (click)="backToShop()">Back to shop</button>
+
+    </div>
+  </ng-container>
+
+  <router-outlet></router-outlet>
+
+  <a [routerLink]="['/shop', 'description']">To description (Lazy loaded module)</a>
+
+
+
+
+</div>
+

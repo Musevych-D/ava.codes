@@ -1,0 +1,15 @@
+<div class="cart">
+  <p>Cart</p>
+  <div class="cart__items">
+    <p>Currently has <span>{{cart.products.length}}</span> products in.</p>
+  </div>
+  <div class="cart__total">
+    <p>Total is: <span>{{cart.total}}</span>$</p>
+  </div>
+  <button
+    class="cart__clearButton"
+    (click)="clearCart()"
+  >
+    Clear Cart
+  </button>
+</div>
